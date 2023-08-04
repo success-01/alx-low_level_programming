@@ -1,8 +1,8 @@
 #include "main.h"
  /**
  * _strcat - concatenates two strings
- * @dest: input value
- * @src: input value
+ * @dest: pointer to the intended string
+ * @src: pointer to the origin string
  *
  * Return: void
  */
@@ -19,11 +19,11 @@ char *_strcat(char *dest, char *src)
 	}
 	y = 0;
 	while (src[y] != '\0')
-        {
-		dest[y] = src[j];
+	{
+		dest[y] = src[y];
 		x++;
 		y++;
-	}                
+	}
 
 	dest[x] = '\0';
 	return (dest);
