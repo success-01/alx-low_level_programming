@@ -8,7 +8,7 @@
  */
 int _atoi(char *s)
 {
-	int a, c, m, len, j, digit;
+	int a, c, n, len, j, digit;
 
 	a = 0;
 	c = 0;
@@ -28,7 +28,7 @@ int _atoi(char *s)
 		if (s[a] >= '0' && s[a] <= '9')
 		{
 			digit = s[a] - '0';
-			if (d % 2)
+			if (c % 2)
 				digit = -digit;
 			n = n * 10 + digit;
 			j = 0;
