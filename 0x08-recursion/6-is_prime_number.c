@@ -20,7 +20,7 @@ int prime_a(int a, int d)
 /**
  * is_prime_number - find out if its a pime number
  * @n:input number
- * Return : 0 or 1
+ * Return: 1 if prime number 0 if otherwise
  */
 int is_prime_number(int n)
 {
