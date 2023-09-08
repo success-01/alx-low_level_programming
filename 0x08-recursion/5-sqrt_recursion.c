@@ -15,9 +15,8 @@ int_sqrt_a(int a, int d)
 	{
 		return (-1);
 	}
-	return (sqrt_a(a, d + 1));
+	return (int_sqrt_a(a, d + 1));
 }
-
 /**
  * _sqrt_recursion - returns natural square root of number
  * @n:input number
