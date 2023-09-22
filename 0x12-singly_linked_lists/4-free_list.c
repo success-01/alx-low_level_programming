@@ -3,7 +3,7 @@
 /**
  * free_list - func that frees a list_t list
  * @head:head of linked list
- * Return: no return
+ * Return: no return.
  */
 void free_list(list_t *head)
 {
