@@ -4,7 +4,7 @@
 
 /**
  * list_len -  produces the number of elements in a linked list_t list
- * @h: the linked lis
+ * @h: the linked list
  *
  * Return: number of elements to a list
  */
