@@ -35,7 +35,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	while (n < len2 && m < (len1 + len2))
 		s[m++] = s2[l++];
 
-	while (n >= len2 && m < (len1 +len2))
+	while (n >= len2 && m < (len1 + len2))
 		s[m++] = s2[l++];
 
 	s[m] = '\0';
