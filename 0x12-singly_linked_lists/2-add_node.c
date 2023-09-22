@@ -3,7 +3,7 @@
 #include <string.h>
 /**
  * *add_node - add brand new node to start of the list
- * @head:first linked list
+ * @head:first linked list.
  * @str: string to add to node
  *
  * Return:address of new list or NULL if unsuccessful
