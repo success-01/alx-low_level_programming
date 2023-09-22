@@ -4,7 +4,7 @@
 #include <stdlib.h>
 /**
  * *add_node_end - adds a new node to the end of a list
- * @head: head of linked list
+ * @head: head of linked list.
  * @str:string to store in the list
  *
  * Return: the address of the head
