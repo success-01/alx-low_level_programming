@@ -4,8 +4,8 @@
 /**
  * print_name - func prints a name
  * @f:pointer to function
- * @name:sring to add
- * Return:void
+ * @name:string to add
+ * Return: nothing
  */
 void print_name(char *name, void (*f)(char *))
 {
