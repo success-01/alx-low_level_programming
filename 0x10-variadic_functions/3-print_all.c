@@ -3,47 +3,49 @@
 #include <stdio.h>
 /**
  * print_all - prints anything and everything
- * @format:list of types of arguments passed to function
+ * @format:argument specifier
+ * Return:any argument given based on format specifier
  */
 void print_all(const char * const format, ...)
 {
-	int m = 0;
-	char *str, *sep = "";
+	int m, check_stat;
+	char *str;
 
 	va_list all;
 
 	va_start(all, format);
 
-	if (format)
-	{
-		while (format[m])
+	m = 0;
+	while (format != NULL && format[m] != '\0')
 		{
 			switch (format[m])
 			{
-				case 'c':
-					printf("%s%c", sep, va_arg(all, int));
-					break;
 				case 'i':
-					printf("%s%d", sep, va_arg(all, int));
+					printf("%d", va_arg(all, int));
+					check_stat = 0;
 					break;
 				case 'f':
-					printf("%s%f", sep, va_arg(all, double));
+					printf("%d", va_arg(all, int));
+					check_stat = 0;
+					break;
+				case 'c':
+					printf("%c", va_arg(all, int));
+					check_stat = 0;
 					break;
 				case 's':
-					str = va_arg(all, char*);
-					if (!str)
+					str = va_arg(all, char *);
+					if (str == NULL)
 						str = "(nil)";
-					printf("%s%s", sep, str);
+					printf("%s", str);
 					break;
 				default:
-					m++;
-					continue;
+					check_stat = 1;
+					break;
 			}
-			sep = ",";
+			if (format[m + 1] != '\0' && check_stat == 0)
+				printf(", ");
 			m++;
 		}
-	}
-
-	printf("\n");
-	va_end(all);
+		printf("\n");
+		va_end(all);
 }
